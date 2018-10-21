@@ -46,7 +46,9 @@ This Version is modified by me, the Player add automatic all Audiofiles in a Pla
 - All Songs will automatic read from "library" directory 
 - Optional: Reconfigure your vhost with the Example Rewrite Settings (NGINX Webserver) 
 
-### Other Libraries used
+### Libraries 
+[AmplitudeJS](https://github.com/521dimensions/amplitudejs), this nice HTML5 Audio Player
+
 [Materialize](http://materializecss.com/), a CSS Framework based on material design
 
 [clipboard.js](https://github.com/zenorocha/clipboard.js), Clipboard Function
