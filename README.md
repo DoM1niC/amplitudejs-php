@@ -49,6 +49,6 @@ This Version is modified by me, the Player add automatic all Audiofiles in a Pla
 ### Other Libraries used
 [Materialize](http://materializecss.com/), a CSS Framework based on material design
 
-[clipboard.js](https://github.com/zenorocha/clipboard.js)
+[clipboard.js](https://github.com/zenorocha/clipboard.js), Clipboard Function
 
-[jquery.nicescroll](https://github.com/inuyaksa/jquery.nicescroll)
+[jquery.nicescroll](https://github.com/inuyaksa/jquery.nicescroll), Scrolling looks nice
