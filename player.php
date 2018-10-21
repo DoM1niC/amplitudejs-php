@@ -113,14 +113,18 @@ exit();
 				      </div>
 				      <span class="song-duration">
 					<?php if ($number) { echo $number; } else { echo "0";} ?></span>
+				<?php if ($DownloadButton == TRUE) { ?>
 				      <a href="<?=$URL?>/<?= $music ?>" download class="download-link" >
 				        <img class="download" src="<?=$URL?>/assets/img/download-solid.svg"/>
 				        <img class="download-white" src="<?=$URL?>/assets/img/download.svg"/>
 				      </a>
+		<?php } ?>
+				<?php if ($ShareButton == TRUE) { ?>
 				      <a data-clipboard-action="copy" data-clipboard-text="<?php if ($number) { echo $URLRewrite . $folder . "/" . $number; } else { echo "/0";} ?>" onclick="Materialize.toast('Link zum Track kopiert!', 4000)" class="copy download-link">
 				        <img class="share" src="<?=$URL?>/assets/img/share-solid.svg"/>
 				        <img class="share-white" src="<?=$URL?>/assets/img/share.svg"/>
 				      </a>
+		<?php } ?>
 				    </div>
 		<?php } ?>
 

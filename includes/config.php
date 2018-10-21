@@ -10,3 +10,9 @@ $URLRewrite = "http://myWebsite.de/player";
 
 // Pfad zur Musik (am besten relativen Pfad verwenden!)
 $folderLocation = "./library";
+
+// Download an/aus
+$DownloadButton = True; 
+
+// Sharing an/aus
+$ShareButton = True; 
