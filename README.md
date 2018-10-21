@@ -52,3 +52,5 @@ This Version is modified by me, the Player add automatic all Audiofiles in a Pla
 [clipboard.js](https://github.com/zenorocha/clipboard.js), Clipboard Function
 
 [jquery.nicescroll](https://github.com/inuyaksa/jquery.nicescroll), Scrolling looks nice
+
+[JQuery](https://jquery.com/)
