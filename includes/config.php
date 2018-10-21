@@ -16,3 +16,8 @@ $DownloadButton = True;
 
 // Sharing an/aus
 $ShareButton = True; 
+
+// RadioStream
+$isLive = false; 
+$LiveURL = "https://radio.3dns.eu/stream"; // IceCast2 Stream Endpoint
+$LiveStats = "https://radio.3dns.eu"; // IceCast2 Server URL

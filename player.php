@@ -27,6 +27,7 @@ exit();
 				  <div class="large-6 medium-6 small-12 cell" id="amplitude-left">
 				    <img amplitude-song-info="cover_art_url" amplitude-main-song-info="true"/>
 				    <div id="player-left-bottom">
+				<?php if ($isLive == FALSE) { ?>
 				      <div id="time-container">
 				        <span class="current-time">
 				          <span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
@@ -40,18 +41,24 @@ exit();
 				          <span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
 				        </span>
 				      </div>
+						<?php } ?>
 
 				      <div id="control-container">
 				        <div id="repeat-container">
+				<?php if ($isLive == FALSE) { ?>
 				          <div class="amplitude-repeat" id="repeat"></div>
 				          <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+						<?php } ?>
 				        </div>
-
 				        <div id="central-control-container">
 				          <div id="central-controls">
+				<?php if ($isLive == FALSE) { ?>
 				            <div class="amplitude-prev" id="previous"></div>
 				            <div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
 				            <div class="amplitude-next" id="next"></div>
+						<?php } else { ?>
+				            <div style="margin-left: 30px" class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
+						<?php } ?>
 				          </div>
 				        </div>
 
@@ -61,17 +68,26 @@ exit();
 				            <input type="range" class="amplitude-volume-slider"/>
 				            <div class="ms-range-fix"></div>
 				          </div>
+				<?php if ($isLive == FALSE) { ?>
 				          <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle-right"></div>
+						<?php } ?>
 				        </div>
 				      </div>
 
 
 
 				      <div id="meta-container">
+				<?php if ($isLive == FALSE) { ?>
 				        <span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name"></span>
-
+						<?php } else { ?>
+				        <span id="Title" class="song-name"></span>
+						<?php } ?>
 				        <div class="song-artist-album">
+				<?php if ($isLive == FALSE) { ?>
 				          <span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
+						<?php } else { ?>
+				          <span id="Listener">0</span>
+						<?php } ?>
 				          <span amplitude-song-info="album" amplitude-main-song-info="true"></span>
 				        </div>
 				      </div>
@@ -79,6 +95,8 @@ exit();
 				  </div>
 				  <div class="large-6 medium-6 small-12 cell" id="amplitude-right">
     	<?php
+	if ($isLive == FALSE) { 
+
 		$i = 0;
 		$counts = array();
 
@@ -96,10 +114,11 @@ exit();
  
     	if (!isset($counts[$item['number']])) {
         	$counts[$item['number']] = 0;
-    		} else {
 	}
 
 		$number = $counts[$music['number']]++;
+
+
 	?>
 				    <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="<?php if ($number) { echo $number; } else { echo "0";} ?>">
 				      <div class="song-now-playing-icon-container">
@@ -127,6 +146,8 @@ exit();
 		<?php } ?>
 				    </div>
 		<?php } ?>
+		<?php } ?>
+
 
 				  </div>
 				</div>
@@ -142,7 +163,7 @@ exit();
 	
 			"songs": [
 	<?php
-
+if ($isLive == FALSE) {
 	foreach($musicStuff as $music) {
 		$Titel = explode("/", $music);
 		$Titel = $Titel[sizeof($Titel)-1];
@@ -175,16 +196,59 @@ exit();
 		"soundcloud_use_art": false,
 		"soundclound_client": "",
 		"autoplay": false,
-		<?php if (isset($id)) { ?>
+		<?php if ($id) { ?>
 		"start_song": "<?= $id ?>"
 		<?php } else {?>
 		"start_song": "0"
-		<?php }?>
+		<?php } 
+
+		} else { 
+		$coverArt = $URL . "/assets/img/logo.jpg";
+		//require "includes/getStats.php";
+
+?>
+				{
+					"name": "<?= $temp_array[5] ?>",
+					"artist": "Hörer: <?= $temp_array[2] ?>",
+					"url": "<?= $LiveURL ?>",
+					"cover_art_url": "<?= $coverArt ?>",
+					"live": true,
+				},
+],
+		"default_album_art": "<?= $coverArt ?>",
+		"autoplay": true,
+		"start_song": "0"
+			<?php } ?>
 		});
 
 	</script>
     <script>
     new ClipboardJS('.copy');
     </script>
+
+<?php if ($isLive == TRUE) { ?>
+<script type="text/javascript">
+$(document).ready(function() {
+ setTimeout(refreshTitle, 1000);
+ setTimeout(refreshListener, 1000);
+});
+
+function refreshTitle() {
+ $.ajax({ url: "<?=$URL?>/loads/getTrack.php" }).done(function (data) {
+  $("#Title").html(data);
+ }).always(function () {
+  setTimeout(refreshTitle, 4 * 1000);
+ });
+}
+function refreshListener() {
+ $.ajax({ url: "<?=$URL?>/loads/getListener.php" }).done(function (data) {
+  $("#Listener").html('Hörer: ' + data);
+ }).always(function () {
+  setTimeout(refreshListener, 4 * 1000);
+ });
+}
+</script>
+	<?php } ?>
+
 	</body>
 </html>
