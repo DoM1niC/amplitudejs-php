@@ -4,16 +4,26 @@ require "includes/autoload.php";
 $head = "includes/head_player.php";
 $folder = $_GET["folder"];
 $id = $_GET["id"];
+if(isset($_GET['isLive'])) {
+$isLive = $_GET["isLive"];
+}
+if(isset($_GET['url'])) {
+$LiveURL = $_GET["url"];
+}
+if(!isset($URLRewrite)) {
+$URLRewrite = $URL;
+}
 $AudioDir = $folderLocation . $folder;
 $cur_dir = basename(dirname(__FILE__));
 $cur_dir2 = basename($folder);
 $CurrentURL = "http://$URLRewrite$folder/";
 foreach(glob($AudioDir .  "/"."*") as $file);
 $musicStuff = glob($AudioDir . "/" . '*.{[mM][pP]3,[wW][aA][vV],[fF][lL][aA][cC]}', GLOB_BRACE);
-if (!$musicStuff) { 
+if (!$FolderCheck == TRUE) { 
+} elseif (!$musicStuff) { 
 include $head;
 echo('<body id="top" class="blue"><center><div class="col s6"><br><br><br><br><a class="btn-large red">Keine Lieder in diesem ordner gefunden!</a></center></div>');
-header('Refresh:3; url=' . $URL);
+header('Refresh:3; url=' . $URLRewrite . '/');
 exit(); 
 }
 ?>
@@ -57,7 +67,7 @@ exit();
 				            <div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
 				            <div class="amplitude-next" id="next"></div>
 						<?php } else { ?>
-				            <div style="margin-left: 30px" class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
+				            <div style="margin-left: 33px" class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
 						<?php } ?>
 				          </div>
 				        </div>
@@ -175,7 +185,7 @@ if ($isLive == FALSE) {
 		$str = str_replace($search, $replace, $Titel);
 		$TrackURL = str_replace($search2, $replace2, $music);
 		$parts = explode(' - ', $str, 2);
-		$CoverName = substr($parts[1], 1);
+		$CoverName = $parts[1];
 		$CoverFile = './cover/' . $CoverName . '.jpg';
 	if (file_exists($CoverFile)) {
 		$coverArt = $URL . "/" . $CoverFile;

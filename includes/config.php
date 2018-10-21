@@ -6,7 +6,7 @@ $SiteName = "Amplitude.js-PHP";
 $URL = "http://myWebsite.de";
 
 // URL gekürzt siehe Rewrite NGINX / Apache
-$URLRewrite = "http://myWebsite.de/player";
+//$URLRewrite = "http://myWebsite.de/player";
 
 // Pfad zur Musik (am besten relativen Pfad verwenden!)
 $folderLocation = "./library";
@@ -15,7 +15,10 @@ $folderLocation = "./library";
 $DownloadButton = True; 
 
 // Sharing an/aus
-$ShareButton = True; 
+$ShareButton = True;
+
+// Warnung / Weiterleitung: Wenn keine Musik gefunden
+$FolderCheck = True;  
 
 // RadioStream
 $isLive = false; 
