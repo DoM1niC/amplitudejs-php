@@ -108,7 +108,7 @@ exit();
 		$search = array('.mp3', '.wav', '.flac');
 		$replace = array('', '', '');
 		$str = str_replace($search, $replace, $Titel);
-		$parts = explode('-', $str);
+		$parts = explode('-', $str, 2);
 		$Title = substr($parts[1], 0);
 
  
@@ -174,7 +174,7 @@ if ($isLive == FALSE) {
 		$replace2 = array('%25', '%23');
 		$str = str_replace($search, $replace, $Titel);
 		$TrackURL = str_replace($search2, $replace2, $music);
-		$parts = explode('-', $str);
+		$parts = explode('-', $str, 2);
 		$CoverName = substr($parts[1], 1);
 		$CoverFile = './cover/' . $CoverName . '.jpg';
 	if (file_exists($CoverFile)) {
