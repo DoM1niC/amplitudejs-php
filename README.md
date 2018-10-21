@@ -44,8 +44,11 @@ This Version is modified by me, the Player add automatic all Audiofiles in a Pla
 - All Songs will automatic read from "library" directory 
 - Optional: Reconfigure your vhost with the Example Rewrite Settings (NGINX Webserver) 
 
+#### Open your URL 
+##### e.g. http://yourURL.de/player.php or with Subfolder & Start Song ID add ?folder=SubFolders&id=0 as Paraemter in your URL.
+Optional: ?isLive=true&url=http://radiostreamURL.de to set a Radiostream without touch the Config.php.
+
 ## Troubleshooting / Issues
-- If you havn't any possible to set Rewrite Rule, use regular URL: http://yourURL.de/player.php?folder=SubFolders&id=0
 - Yes, RadioStats works just with IceCast2
 - Yes, much Songs over 1000 Tracks could break or overkill PHP Process.
 - Clipboard is currently not working, I figure out the Problem currently.
