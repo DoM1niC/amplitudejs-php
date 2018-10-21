@@ -4,7 +4,7 @@
 	</a>
 </p>
 
-Amplitude.js is a lightweight JavaScript library that allows you to control the design of your media controls in your webpage -- not the browser. No dependencies (jQuery not required). Amplitude.js is available under the [MIT License](https://raw.githubusercontent.com/521dimensions/amplitudejs/master/LICENSE).
+Amplitude.js is a lightweight JavaScript library that allows you to control the design of your media controls in your webpage -- not the browser. Amplitude.js is available under the [MIT License](https://raw.githubusercontent.com/521dimensions/amplitudejs/master/LICENSE).
 
 This Version is modified by me, the Player add automatic all Audiofiles in a Playlist, to listen your Songs directly.
 
