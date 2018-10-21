@@ -22,5 +22,6 @@ $FolderCheck = True;
 
 // RadioStream
 $isLive = false; 
-$LiveURL = "https://radio.3dns.eu/stream"; // IceCast2 Stream Endpoint
-$LiveStats = "https://radio.3dns.eu"; // IceCast2 Server URL
+$LiveURL = "https://myRadioStream.de"; // IceCast2 Stream Endpoint
+$LiveStats = "https://myRadioStream.de:8000"; // IceCast2 Server URL
+//$LiveName = "sdasd"; // Ersetzt den Title Namen mit einen Eigenen z.B. wenn man keine Stats hat vom Stream

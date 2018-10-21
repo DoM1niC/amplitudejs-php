@@ -89,13 +89,15 @@ exit();
 				      <div id="meta-container">
 				<?php if ($isLive == FALSE) { ?>
 				        <span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name"></span>
+						<?php } elseif ($LiveName) { ?>
+				        <span class="song-name"><?=$LiveName?></span>
 						<?php } else { ?>
 				        <span id="Title" class="song-name"></span>
 						<?php } ?>
 				        <div class="song-artist-album">
 				<?php if ($isLive == FALSE) { ?>
 				          <span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
-						<?php } else { ?>
+						<?php } elseif ($LiveStats) { ?>
 				          <span id="Listener">0</span>
 						<?php } ?>
 				          <span amplitude-song-info="album" amplitude-main-song-info="true"></span>
