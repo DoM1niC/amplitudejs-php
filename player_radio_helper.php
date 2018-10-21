@@ -6,7 +6,7 @@ $head = "includes/head_player.php";
 <style>
 #frame { 
 height:100vh;
-width:45vw;
+width:25vw;
 }
 </style>
 <!DOCTYPE HTML>
