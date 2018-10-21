@@ -204,12 +204,9 @@ if ($isLive == FALSE) {
 
 		} else { 
 		$coverArt = $URL . "/assets/img/logo.jpg";
-		//require "includes/getStats.php";
 
 ?>
 				{
-					"name": "<?= $temp_array[5] ?>",
-					"artist": "Hörer: <?= $temp_array[2] ?>",
 					"url": "<?= $LiveURL ?>",
 					"cover_art_url": "<?= $coverArt ?>",
 					"live": true,
