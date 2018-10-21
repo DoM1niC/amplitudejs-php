@@ -4,6 +4,7 @@ require "includes/autoload.php";
 $head = "includes/head_player.php";
 $folder = $_GET["folder"];
 $id = $_GET["id"];
+$background = $_GET["trans"];
 if(isset($_GET['isLive'])) {
 $isLive = $_GET["isLive"];
 }
@@ -30,7 +31,7 @@ exit();
 <!DOCTYPE html>
 <html>
 <?php include $head; ?>
-	<body>
+	<body class="background">
 		<div class="grid-x" id="blue-playlist-container">
 			<div class="large-10 medium-12 small-11 large-centered medium-centered small-centered cell" id="amplitude-player">
 				<div class="grid-x">

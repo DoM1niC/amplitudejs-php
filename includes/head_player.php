@@ -1,4 +1,16 @@
 	<head>
+	<style>
+	<?php if (!isset($_GET['trans'])) { ?>
+.background {
+  background-image: -webkit-linear-gradient(316deg, #3BD2AE 0%, #36BAC2 100%);
+  background-image: linear-gradient(-226deg, #00A0FF 0%, #3AB7FF 100%);
+}
+	<?php } else { ?>
+.background {
+background:none transparent;
+}
+	<?php } ?>
+</style>
     		<title><?=$SiteName?><?php if ($cur_dir2) { echo(' - ' . $cur_dir2); }?></title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -12,10 +12,9 @@ width:25vw;
 <!DOCTYPE HTML>
 <html lang="en">
 <?php include $head; ?>
-<body>
+<body class="blue">
 <div class="container">
-<center><iframe id="frame" frameborder="0" scrolling="no" src="player.php?isLive=true&id=0"></iframe></center>
-</div>
+<center><iframe id="frame" frameborder="0" allowtransparency="true" scrolling="no" src="player.php?isLive=true&id=0&trans=true"></iframe></center>
 </div>
 </body>
 </html>
