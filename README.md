@@ -17,15 +17,13 @@ This Version is modified by me, the Player add automatic all Audiofiles in a Pla
 </p>
 
 ## Features
-* Completely independent library (no jQuery required)
 * 100% customizable design of all player elements
-* Available by CDN or single command install: `npm install --save amplitudejs`
 * Multiple playlist support on single page
+* Playlist without Database just PHP glob
 * Song meta data display
 * Mobile Device Optimized
-* Without Database just PHP
 * Soundcloud integration
-* Live streaming support
+* Live streaming support (IceCast2)
 * Call back functions for events
 	* Play/Pause
 	* Stop
@@ -45,6 +43,12 @@ This Version is modified by me, the Player add automatic all Audiofiles in a Pla
 - Open "includes/config.php" and setup the URLs
 - All Songs will automatic read from "library" directory 
 - Optional: Reconfigure your vhost with the Example Rewrite Settings (NGINX Webserver) 
+
+## Troubleshooting / Issues
+- If you havn't any possible to set Rewrite Rule, use regular URL: http://yourURL.de/player.php?folder=SubFolders&id=0
+- Yes, RadioStats works just with IceCast2
+- Yes, much Songs over 1000 Tracks could break or overkill PHP Process.
+- Clipboard is currently not working, I figure out the Problem currently.
 
 ### Libraries 
 [AmplitudeJS](https://github.com/521dimensions/amplitudejs), this nice HTML5 Audio Player
