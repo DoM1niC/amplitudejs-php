@@ -1,5 +1,5 @@
 	<head>
-    		<title>3DNS Music<?php if ($cur_dir2) { echo(' - ' . $cur_dir2); }?></title>
+    		<title><?=$SiteName?><?php if ($cur_dir2) { echo(' - ' . $cur_dir2); }?></title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=0.7, user-scalable=no">

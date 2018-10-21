@@ -1,4 +1,7 @@
 <?php
+// Name der Seite
+$SiteName = "Amplitude.js-PHP";
+
 // Volle URL
 $URL = "http://myWebsite.de";
 
