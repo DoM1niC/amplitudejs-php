@@ -10,10 +10,10 @@ This Version is modified by me, the Player add automatic all Audiofiles in a Pla
 
 ## Demo
 <p align="center">
-	<a href="https://521dimensions.com/open-source/amplitudejs" target="_blank">
+	<a href="https://3dns.eu/music/0" target="_blank">
 		<img src="https://521dimensions.com/img/open-source/amplitudejs/AmplitudeDemo.jpg" alt="MIT License" width="600">
 	</a><br />
-	Click the image above to go to the demo site or <a href="https://3dns.eu/music/" target="_blank">click here</a>.
+	Click the image above to go to the demo site or <a href="https://3dns.eu/music/0" target="_blank">click here</a>.
 </p>
 
 ## Features
