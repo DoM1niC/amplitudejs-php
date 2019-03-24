@@ -26,7 +26,7 @@ background:none transparent;
     		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js"></script>
 		<script type="text/javascript" src="<?=$URL?>/assets/js/foundation.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/amplitudejs/3.3.1/amplitude.min.js"></script>
+		<script type="text/javascript" src="<?=$URL?>/assets/js/amplitude.min.js"></script>
   		<script type="text/javascript" src="<?=$URL?>/assets/js/functions.js"></script>
 
 	</head>

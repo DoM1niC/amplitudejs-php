@@ -2,7 +2,6 @@
 	Initializes the player
 */
 $(document).ready(function(){
-
 	/*
 		Initializes foundation for responsive design.
 	*/
@@ -76,8 +75,6 @@ $(document).ready(function(){
    $('select').material_select();
    $('ul.tabs').tabs();
    $('#loader').addClass("hide-loader");
-   $("#amplitude-right").niceScroll({styler:"fb",cursorcolor:"#00A0FF", cursorwidth: '6', cursorborderradius: '10px', hwacceleration: true, spacebarenabled:false,  cursorborder: ''});
-   //$("body").niceScroll({styler:"fb",cursorcolor:"#00A0FF", cursorwidth: '6', cursorborderradius: '10px', background: '#404040', hwacceleration: true, spacebarenabled:false,  cursorborder: ''});  
 });   
 /*
 	Adjusts the height of the left and right side of the players to be the same.
