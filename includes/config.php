@@ -20,6 +20,15 @@ $ShareButton = True;
 // Warnung / Weiterleitung: Wenn keine Musik gefunden
 $FolderCheck = True;  
 
+// Suche innerhalb einer Playlist | an/aus
+$SearchBar = True; 
+
+// Verpacke Playlist als ZIP Archiv | an/aus
+$ZipPlaylist = True; 
+
+// Waveforms im Slider | an/aus
+$Waveforms = True; 
+
 // RadioStream
 $isLive = false; 
 $LiveURL = "https://myRadioStream.de"; // IceCast2 Stream Endpoint

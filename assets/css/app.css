@@ -145,6 +145,25 @@ div#progress-container {
     IE 11
   */
 }
+div.amplitude-wave-form {
+  margin-top: -14px
+}
+
+div.amplitude-wave-form svg {
+  stroke: #00a0ff;
+  height: 50px;
+  width: 100%;
+  stroke-width: .5px
+}
+
+div.amplitude-wave-form svg g {
+  stroke: #00a0ff;
+  height: 50px;
+  width: 100%
+}
+input[type=range] {
+  border: 0px solid white;
+}
 div#progress-container:hover input[type=range].amplitude-song-slider::-webkit-slider-thumb {
   display: block;
 }
